@@ -57,8 +57,8 @@ body {
     background-size: auto;
     background-position: center;
     transition: all .1s ease-in-out;
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Fvector-gratis%2Ffondo-banner-tecnologia-formas-hexagonales-espacio-texto_6286507.htm&psig=AOvVaw3Sn9hQLzHXecPJwcekRZvF&ust=1668482150944000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDWtcHarPsCFQAAAAAdAAAAABAF);
-    /* animation: banner 25s infinite linear; */
+    background-image: url(../img/Banner1.jpg);
+    animation: banner 25s infinite linear;
 
 
 }
@@ -106,32 +106,32 @@ body {
 
 @keyframes banner {
     0% {
-        background-image: url(/IMG/Banner1.jpg);
+        background-image: url(../img/Banner1.jpg);
 
     }
 
     40% {
-        background-image: url(resources/img/Banner1.jpg);
+        background-image: url(../img/Banner1.jpg);
 
     }
 
     41% {
-        background-image: url(/IMG/Banner2.jpg);
+        background-image: url(../img/Banner2.jpg);
 
     }
 
     70% {
-        background-image: url(/IMG/Banner2.jpg);
+        background-image: url(../img/Banner2.jpg);
 
     }
 
     71% {
-        background-image: url(/IMG/Banner3.jpg);
+        background-image: url(../img/Banner3.jpg);
 
     }
 
     100% {
-        background-image: url(/IMG/Banner3.jpg);
+        background-image: url(../img/Banner3.jpg);
 
     }
 
