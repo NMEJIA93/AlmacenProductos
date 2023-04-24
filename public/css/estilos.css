@@ -1,0 +1,403 @@
+/*###############################################################
+###########################  HEADER  #############################*
+#################################################################*/
+
+body {
+    background-color: rgb(205, 243, 252);
+}
+
+.menu {
+    background-color: rgba(12, 97, 131, 0.774);
+    height: 55px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(11, 79, 167, 0.7);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+}
+
+
+.logo {
+    color: white;
+    font-size: 35px;
+    padding: 0px 80px;
+    font-weight: bold;
+    background-color: rgba(12, 97, 131, 0.6);
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items li {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_items li a {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(45vh - 55px);
+    background-color: rgb(4, 76, 158);
+    background-size: auto;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Fvector-gratis%2Ffondo-banner-tecnologia-formas-hexagonales-espacio-texto_6286507.htm&psig=AOvVaw3Sn9hQLzHXecPJwcekRZvF&ust=1668482150944000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDWtcHarPsCFQAAAAAdAAAAABAF);
+    /* animation: banner 25s infinite linear; */
+
+
+}
+
+.banner-cont {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner-cont h1 {
+    margin: 0;
+    padding: 0;
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-cont a {
+    text-decoration: none;
+    color: white;
+    padding: 9px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+
+.menu_items li:hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.menu_items li:active {
+    background-color: rgba(5, 9, 71, 0.9);
+    transition: .4s;
+}
+
+
+@keyframes banner {
+    0% {
+        background-image: url(/IMG/Banner1.jpg);
+
+    }
+
+    40% {
+        background-image: url(resources/img/Banner1.jpg);
+
+    }
+
+    41% {
+        background-image: url(/IMG/Banner2.jpg);
+
+    }
+
+    70% {
+        background-image: url(/IMG/Banner2.jpg);
+
+    }
+
+    71% {
+        background-image: url(/IMG/Banner3.jpg);
+
+    }
+
+    100% {
+        background-image: url(/IMG/Banner3.jpg);
+
+    }
+
+}
+
+.banner-cont a:hover {
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px 35px;
+    border: 1px solid white;
+    font-size: 20px;
+
+}
+
+/* @media screen and (max-width:959px) {
+    #Logo1 {
+        color: rgb(240, 11, 11);
+        
+        padding: 0px 50px;
+        font-weight: bold;
+        background-color: rgba(131, 12, 95, 0.6);
+        border-radius: 3px;
+        font-size: 25px;
+        margin-left: 10px;
+
+
+    }
+
+} */
+
+
+/*###############################################################
+###########################  INSERT  #############################*
+#################################################################*/
+.cuerpoIndex div {
+    display: inline-block;
+    width: 100vw;
+    height: 40vw;
+    padding: 10px 0px;
+
+
+}
+
+.cuerpoIndex .cuerpo-derecho {
+    float: left;
+    /* text-align: center; */
+    background-color: rgba(12, 97, 131, 0.774);
+    width: 20vw;
+}
+
+.cuerpoIndex .cuerpo-izquierdo {
+    /* text-align: center; */
+    background-color: rgb(205, 243, 252);
+    /* background: linear-gradient(to right, #b5cfd9, #327a97); */
+    /* margin-bottom: 15px; */
+    padding-top: 20px;
+    width: 80vw;
+
+}
+
+.cuerpoIndex .cuerpo-izquierdo legend {
+    text-align: center;
+}
+
+.formulariodiv {
+    padding-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.formulario form .inp-formulario,
+input,
+textarea {
+    position: relative;
+    width: 90%;
+    padding: 10px 5px;
+    font-size: 15px;
+    border: 0.5px solid rgb(3, 3, 77);
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border-radius: 3px;
+}
+
+.fieldset {
+    background: linear-gradient(to right, #b5cfd9, #327a97);
+    border-radius: 5px;
+    /* width:40vw;   */
+}
+
+.cuerpoIndex .cuerpo-derecho a {
+
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: white
+}
+
+.cuerpoIndex .cuerpo-derecho li {
+    border-radius: 3px;
+    margin: 0 5px;
+    list-style: none;
+}
+
+.cuerpoIndex .cuerpo-derecho li:hover {
+    background-color: rgba(5, 9, 71, 0.9);
+    transition: .4s;
+}
+
+.PiePagina {
+    background-color: rgba(12, 97, 131, 0.774);
+    height: 55px;
+    width: 100vw;
+    border-bottom: 1px solid rgba(6, 49, 105, 0.7);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+
+
+.PiePaginadiv {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.PiePaginadiv li {
+    border-radius: 3px;
+    margin: 0 5px;
+    text-align: center;
+    color: white;
+}
+
+.PiePaginadiv li a {
+    padding: 2px 13px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+
+/*###############################################################
+###########################  FIND  #############################*
+#################################################################*/
+
+.resultados {
+    margin-left: 200px;
+    margin-bottom: 75px;
+
+}
+
+.cuerpo-izquierdo .cardResultados {
+    background-color: rgba(12, 97, 131, 0.774);
+    color: white;
+    width: 450px;
+    height: 200px;
+    margin-left: 20px;
+
+}
+
+.cuerpo-izquierdo .Form_find table {
+
+    padding: 0px 0px;
+    width: 450px;
+    margin-left: 20px;
+    /* background-color: chocolate;
+    border-collapse: separate; */
+    margin-bottom: 15px;
+}
+
+.Form_find .td_resultados input {
+    background-color: rgba(139, 209, 236, 0.4);
+    margin: 0px;
+}
+
+.Form_find .td_resultados button {
+    height: 45px;
+    width: 150px;
+    margin: 0px;
+
+}
+
+
+/* .cuerpo-izquierdo .Find_empleado {
+    height: 5vw;
+    width: 40vw;
+    background-color: coral;
+    padding: 0px;
+
+}
+
+
+.Find_empleado .Form_find {
+    padding-left: 0px;
+    background-color: brown;
+    margin-left: 25px;
+    justify-content: center
+}
+
+.Form_find input {
+
+    margin-left: none;
+}
+
+.Form_find button {
+
+    margin-left: none;
+} */
+
+
+
+.table_form_Update {
+
+    margin-left: 110px;
+    margin-bottom: 15px;
+    width: 600px;
+}
+
+.Form_Update .td_Update input {
+    background-color: rgba(139, 209, 236, 0.4);
+    margin: 0px;
+}
+
+.Form_Update .td_Update button {
+    height: 45px;
+    width: 150px;
+    margin: 0px;
+
+}
+
+
+
+/* Pagina Permisos  */
+
+.cuerpo-izquierdo .FechasPermisos{
+    color: white;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.cuerpo-izquierdo .bnt_registrarPermiso {
+    /* background-color: rgb(42, 110, 165); */
+    width: 500px;
+   
+    height: 50px;
+     margin-left: 35px; 
+    margin-bottom: 10px;
+    
+}
+
+.cuerpo-izquierdo  .div_bnt_registrarPermiso{
+    height: 74px;
+  
+}
+
+
+
+.cuerpo-izquierdo .cardResultadosPermisos{
+    /* background-color: brown; */
+    width: 80vw;
+    height: 40vw;
+}
+
+
+.cuerpo-izquierdo .cardResultadosPermisos .container{
+    
+    width: 80vw;
+}
