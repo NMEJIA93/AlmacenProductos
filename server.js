@@ -6,6 +6,8 @@ const { engine } = require('express-handlebars');
 const methodOverride = require('method-override');
 
 
+
+
 class Server {
 
     constructor() {
@@ -25,6 +27,9 @@ class Server {
         this.routes();
 
 
+      /*   this.PruebaConexionSQL()
+
+ */
 
     }
 
@@ -71,10 +76,16 @@ class Server {
 
     listen() {
         this.app.listen(this.port, () => {
+            console.log('aplicacion iniciada desde el archivo server')
             console.log(`el servidor esta escuchando por el puerto ${this.port}`)
+            
         })
     }
 
+   /*  PruebaConexionSQL(){
+        this.app.use(require('./database/connectionBD'))
+    }
+ */
 }
 
 module.exports = Server;

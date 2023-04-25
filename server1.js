@@ -1,10 +1,16 @@
+require('dotenv').config();
+
 //Importaciones de Otros archivos
 //
+
+
 const port = process.env.PORT;
 
 
 //Importaciones de paquetes instalados 
-const express = require('express');
+
+
+const express = require('express'); 
 const morgan = require('morgan');
 const path = require('path');
 const {engine} = require('express-handlebars');
@@ -55,6 +61,8 @@ app.listen(port,()=>{
 // Rutas 
 app.use(require('./routes/index'));
 
-module.exports = app;
+module.exports = app; 
+
+
 
 
