@@ -6,7 +6,7 @@ const dbSettings = {
     user: 'sa',
     password: 'asdf123.',
     server: 'localhost',
-    database: 'Empresa',
+    database: 'almacen',
     options: {
         encrypt: true,
         trustServerCertificate: true
