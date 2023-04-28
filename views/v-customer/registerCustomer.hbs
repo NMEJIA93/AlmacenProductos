@@ -1,61 +1,79 @@
 <div class="divRegistroCliente">
+
+
     <h1>Aquí va el formulario para el Registro</h1>
+
+
+
+
 
 
     <div class="Registro-Cliente" id="Rcliente">
         <fieldset class="fieldset" ;
             style=" margin:auto 10%; width:600px; border: 1px solid rgba(12, 97, 131, 0.774); ">
-            <legend style="color:  rgba(12, 97, 131, 1);">REGISTRAR EMPLEADO</legend>
+            {{!-- <legend style="color:  rgba(12, 97, 131, 1);">REGISTRAR EMPLEADO</legend> --}}
+            <div class="divFormularioRegistroCliente">
+                <form class="formulario" action="/empleados" method="POST" style="width:500px;"> {{!-- Modificar para
+                    este
+                    proyecto --}}
 
-            <form class="formulario" action="/empleados" method="POST" style="width:500px;"> {{!-- Modificar para este proyecto --}}
+                    {{!-- <label for="exampleFormControlInput1" class="form-label">Cedula</label> --}}
+                    <input type="number" class="form-control" id="id" name="id" placeholder="Cedula">
 
-                {{!-- <label for="exampleFormControlInput1" class="form-label">Cedula</label> --}}
-                <input type="number" class="form-control" id="id" name="id" placeholder="Cedula">
+                    {{!-- <label for="exampleFormControlInput1" class="form-label">Nombre</label> --}}
+                    <input type="text" class="form-control" id="primer-nombre" name="primer-nombre"
+                        placeholder="Primer Nombre">
 
-                {{!-- <label for="exampleFormControlInput1" class="form-label">Nombre</label> --}}
-                <input type="text" class="form-control" id="primer-nombre" name="primer-nombre"
-                    placeholder="Primer Nombre">
+                    <input type="text" class="form-control" id="segundo-nombre" name="segundo-nombre"
+                        placeholder="Segundo Nombre">
 
-                <input type="text" class="form-control" id="segundo-nombre" name="segundo-nombre"
-                    placeholder="Segundo Nombre">
+                    <input type="text" class="form-control" id="primer-apellido" name="primer-apellido"
+                        placeholder="Primer Apellido">
 
-                <input type="text" class="form-control" id="primer-apellido" name="primer-apellido"
-                    placeholder="Primer Apellido">
+                    <input type="text" class="form-control" id="segundo-apellido" name="segundo-apellido"
+                        placeholder="Segundo Apellido">
 
-                <input type="text" class="form-control" id="segundo-apellido" name="segundo-apellido"
-                    placeholder="Segundo Apellido">
-
-                <label class="fecha-nacimiento" for="start">Fecha Inicio:</label>
-                <input type="date" class="form-control" id="fecha-nacimiento" name="fecha_inicio" min="1950-01-01"
-                    max="2030-12-31">
-
-
-
-                <label for="Tipo de Documento">Barrios</label>
-                <select name="barrios" id="barrios" class="tipo-documento" id="tipo-documento">
-                    {{!-- <option value="ninguno">Seleccione una opcion</option> --}}
-                    <option value="cc">Cedula Ciudadania</option>
-                    <option value="ce">Cedula Extrangeria</option>
-                </select>
+                    <label class="fecha-nacimiento" for="start">Fecha Inicio:</label>
+                    <input type="date" class="form-control" id="fecha-nacimiento" name="fecha_inicio" min="1950-01-01"
+                        max="2030-12-31">
 
 
 
-
-                {{!-- <label for="exampleFormControlInput1" class="form-label">Apellido</label> --}}
-                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
-
-                {{!-- <label for="exampleFormControlInput1" class="form-label">Email</label> --}}
-                <input type="text" class="form-control" id="email" name="email" placeholder="email">
-
-
-                <div class="div_bnt_registrarPermiso">
-                    <button class=" btn btn-primary  bnt_registrarPermiso" type="submit">Registrar</button>
-                </div>
-
-                <br>
+                    <label for="Tipo de Documento">Tipo Documento</label>
+                    <select name="tipo-documento" id="tipo-documento" class="tipo-documento" id="tipo-documento">
+                        {{!-- <option value="ninguno">Seleccione una opcion</option> --}}
+                        <option value="cc">Cedula Ciudadania</option>
+                        <option value="ce">Cedula Extrangeria</option>
+                    </select>
 
 
-            </form>
+                    {{!-- <label for="exampleFormControlInput1" class="form-label">Apellido</label> --}}
+                    <input type="number" class="form-control" id="numero-documento" name="numero-documento" placeholder="N° Documento">
+
+                    {{!-- <label for="exampleFormControlInput1" class="form-label">Email</label> --}}
+                    <input type="email" class="form-control" id="email" name="email" placeholder="email">
+
+                    <input type="number" class="form-control" id="numero-documento" name="numero-documento" placeholder="N° Documento">
+
+                    <input type="text" class="form-control" id="indicativo-" name="indicativo" placeholder="+57">
+
+                    <input type="number" class="form-control" id="numero-contacto" name="numero-contacto" placeholder="N° Documento">
+
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
+
+                    <input type="text" class="form-control" id="confirmar-password" name="confirmar-password" placeholder="Confirmar Contraseña">
+
+
+                    <div class="div_bnt_registrarPermiso">
+                        <button class=" btn btn-primary  bnt_registrarPermiso" type="submit">Registrar</button>
+                    </div>
+
+                    <br>
+
+
+                </form>
+            </div>
+
         </fieldset>
 
 

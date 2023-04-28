@@ -22,6 +22,7 @@ const getConnection = async () => {
     } catch (error) {
         console.log(`El error es ${error}`);
         console.log('error en el archivo de conexion');
+        console.log(error)
     }
 }
  module.exports={getConnection, sql}; 

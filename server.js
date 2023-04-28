@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const path = require('path');
 const { engine } = require('express-handlebars');
 const methodOverride = require('method-override');
+const {dbConnection} = require('./database/connectionDBmongo');
+const {getConnection} = require('./database/connectionBD');
 
 
 
@@ -13,7 +15,7 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-        this.clientesPath = '/cliente';
+       /*  this.clientesPath = '/cliente'; */
 
         //Configurar Vistas
         this.views();
@@ -27,10 +29,20 @@ class Server {
         this.routes();
 
 
-      /*   this.PruebaConexionSQL()
+      /*   this.PruebaConexionSQL()*/
+      
+      // Base de Datos
+      this.conectarBDmongo();
+      this.conectarBDsql();
+    }
 
- */
 
+    async conectarBDmongo(){
+        await dbConnection();
+    }
+
+    async conectarBDsql(){
+        await getConnection();
     }
 
     // Middlewares
