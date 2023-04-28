@@ -13,7 +13,7 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
-        this.usuariosPath = '/usuarios';
+        this.clientesPath = '/cliente';
 
         //Configurar Vistas
         this.views();
@@ -37,7 +37,8 @@ class Server {
     middlewares() {
         //Directorio publico
         this.app.use(express.static('public'));
-        this.app.use("/resources", express.static(__dirname + "/public"));
+        /* this.app.use("/resources", express.static(__dirname + "/public")); */
+        this.app.use("/resources", express.static( "public"));
         this.app.use(cors());
 
 
@@ -57,7 +58,7 @@ class Server {
     routes() {
         /* this.app.use(this.usuariosPath, require('../routes/usuarios')); */
         this.app.use(require('./routes/index'));
-        this.app.use(require('./routes/customer_routes'));
+        this.app.use(/* this.clientesPath, */require('./routes/customer_routes'));
 
     }
 
