@@ -1,82 +1,123 @@
-<div class="divRegistroCliente">
+{{!-- <h1>HOME</h1> --}}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empresa</title>
 
 
-    <h1>Aquí va el formulario para el Registro</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/estilos.css">
+    <link type="text/css" rel="stylesheet" href="resources/css/tailwind.min.css" media="screen,projection" />
 
 
+    {{!-- otros Estilos --}}
+    {{!--
+    <link rel="stylesheet" href="resources/css/normalize.css"> --}}
+    <link rel="stylesheet" href="resources/css/skeleton.css">
+    <link rel="stylesheet" href="resources/css/custom.css">
+
+</head>
 
 
+{{>header}}
+
+<body>
+    <div class="divRegistroCliente">
 
 
-    <div class="Registro-Cliente" id="Rcliente">
-        <fieldset class="fieldset" ;
-            style=" margin:auto 10%; width:600px; border: 1px solid rgba(12, 97, 131, 0.774); ">
-            {{!-- <legend style="color:  rgba(12, 97, 131, 1);">REGISTRAR EMPLEADO</legend> --}}
-            <div class="divFormularioRegistroCliente">
-                <form class="formulario" action="/empleados" method="POST" style="width:500px;"> {{!-- Modificar para
-                    este
-                    proyecto --}}
-
-                    {{!-- <label for="exampleFormControlInput1" class="form-label">Cedula</label> --}}
-                    <input type="number" class="form-control" id="id" name="id" placeholder="Cedula">
-
-                    {{!-- <label for="exampleFormControlInput1" class="form-label">Nombre</label> --}}
-                    <input type="text" class="form-control" id="primer-nombre" name="primer-nombre"
-                        placeholder="Primer Nombre">
-
-                    <input type="text" class="form-control" id="segundo-nombre" name="segundo-nombre"
-                        placeholder="Segundo Nombre">
-
-                    <input type="text" class="form-control" id="primer-apellido" name="primer-apellido"
-                        placeholder="Primer Apellido">
-
-                    <input type="text" class="form-control" id="segundo-apellido" name="segundo-apellido"
-                        placeholder="Segundo Apellido">
-
-                    <label class="fecha-nacimiento" for="start">Fecha Inicio:</label>
-                    <input type="date" class="form-control" id="fecha-nacimiento" name="fecha_inicio" min="1950-01-01"
-                        max="2030-12-31">
+        <h1>Aquí va el formulario para el Registro</h1>
 
 
 
-                    <label for="Tipo de Documento">Tipo Documento</label>
-                    <select name="tipo-documento" id="tipo-documento" class="tipo-documento" id="tipo-documento">
-                        {{!-- <option value="ninguno">Seleccione una opcion</option> --}}
-                        <option value="cc">Cedula Ciudadania</option>
-                        <option value="ce">Cedula Extrangeria</option>
-                    </select>
-
-
-                    {{!-- <label for="exampleFormControlInput1" class="form-label">Apellido</label> --}}
-                    <input type="number" class="form-control" id="numero-documento" name="numero-documento" placeholder="N° Documento">
-
-                    {{!-- <label for="exampleFormControlInput1" class="form-label">Email</label> --}}
-                    <input type="email" class="form-control" id="email" name="email" placeholder="email">
-
-                    <input type="number" class="form-control" id="numero-documento" name="numero-documento" placeholder="N° Documento">
-
-                    <input type="text" class="form-control" id="indicativo-" name="indicativo" placeholder="+57">
-
-                    <input type="number" class="form-control" id="numero-contacto" name="numero-contacto" placeholder="N° Documento">
-
-                    <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
-
-                    <input type="text" class="form-control" id="confirmar-password" name="confirmar-password" placeholder="Confirmar Contraseña">
-
-
-                    <div class="div_bnt_registrarPermiso">
-                        <button class=" btn btn-primary  bnt_registrarPermiso" type="submit">Registrar</button>
-                    </div>
-
-                    <br>
-
-
-                </form>
-            </div>
-
-        </fieldset>
 
 
 
+        <div class="Registro-Cliente" id="Rcliente">
+            <fieldset class="fieldset" ;
+                style=" margin:auto 10%; width:600px; border: 1px solid rgba(12, 97, 131, 0.774); ">
+                {{!-- <legend style="color:  rgba(12, 97, 131, 1);">REGISTRAR EMPLEADO</legend> --}}
+                <div class="divFormularioRegistroCliente">
+                    <form class="formulario" action="/register_customer" method="POST" style="width:500px;"> {{!--
+                        Modificar
+                        para
+                        este
+                        proyecto --}}
+
+                        {{!-- <label for="exampleFormControlInput1" class="form-label">Cedula</label> --}}
+                        {{!-- <input type="number" class="form-control" id="id" name="id" placeholder="Cedula"> --}}
+
+                        {{!-- <label for="exampleFormControlInput1" class="form-label">Nombre</label> --}}
+                        <input type="text" class="form-control" id="pNombre" name="pNombre" placeholder="Primer Nombre">
+
+                        <input type="text" class="form-control" id="sNombre" name="sNombre"
+                            placeholder="Segundo Nombre">
+
+                        <input type="text" class="form-control" id="pApellido" name="pApellido"
+                            placeholder="Primer Apellido">
+
+                        <input type="text" class="form-control" id="sApellido" name="sApellido"
+                            placeholder="Segundo Apellido">
+
+                        <label class="fecha-nacimiento" for="start">Fecha Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+                            min="1950-01-01" max="2030-12-31">
+
+
+
+                        <label for="Tipo de Documento">Tipo Documento</label>
+                        <select name="tIdentificacion" id="tIdentificacion" class="tipo-documento" id="tipo-documento">
+                            {{!-- <option value="ninguno">Seleccione una opcion</option> --}}
+                            <option value="cc">Cedula Ciudadania</option>
+                            <option value="ce">Cedula Extrangeria</option>
+                        </select>
+
+
+                        {{!-- <label for="exampleFormControlInput1" class="form-label">Apellido</label> --}}
+                        <input type="number" class="form-control" id="nIdentificacion" name="nIdentificacion"
+                            placeholder="N° Documento">
+
+                        {{!-- <label for="exampleFormControlInput1" class="form-label">Email</label> --}}
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email">
+
+                        {{!-- <input type="number" class="form-control" id="numero-documento" name="numero-documento"
+                            placeholder="N° Documento"> --}}
+
+                        <input type="text" class="form-control" id="indiccativoPais" name="indiccativoPais"
+                            placeholder="+57">
+
+                        <input type="number" class="form-control" id="tContacto" name="tContacto"
+                            placeholder="Telefono o celular">
+
+                        <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
+
+                        <input type="text" class="form-control" id="confirmar-password" name="confirmar-password"
+                            placeholder="Confirmar Contraseña">
+
+
+                        <div class="div_bnt_registrarPermiso">
+                            <button class=" btn btn-primary  bnt_registrarPermiso" type="submit">Registrar</button>
+                        </div>
+
+                        <br>
+
+
+                    </form>
+                </div>
+
+            </fieldset>
+
+
+
+        </div>
     </div>
-</div>
+
+</body>
+
+{{>footer}}
+
+</html>

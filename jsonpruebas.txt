@@ -1,0 +1,22 @@
+{
+        "pNombre":"Norbey",
+        "sNombre": "Alonso",
+        "pApellido": "Mejia",
+        "sApellido": "Cortes",
+        "fechaNacimiento": "1993/09/16",
+        "tIdentificacion": "CC",
+        "nIdentificacion":"1017",
+        "email": "norbeymejiacortes@gmail.com",
+        "indiccativoPais": "+57",
+        "tContacto": "316462",
+        "password": "asdf123."
+        
+}
+
+
+{
+        "nombre":"Norbey",
+        "correo": "norbeymejiacortes@gmail.com",
+        "password": "asdf123.",
+        "rol": "cliente" 
+}

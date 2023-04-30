@@ -16,7 +16,7 @@ const dbSettings = {
 const getConnection = async () => {
     try {
         const pool = await sql.connect(dbSettings);
-        console.log('Conexion Exitosa');
+        console.log('Conexion SQL Server Online');
         return pool;
 
     } catch (error) {
