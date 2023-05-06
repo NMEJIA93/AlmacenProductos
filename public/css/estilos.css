@@ -193,9 +193,9 @@ body {
 ###########################  INSERT  #############################*
 #################################################################*/
 
-/*
+
 .cuerpoIndex div {
-    display: inline-block;
+    display: inline-block; 
     width: 100vw;
     height: 40vw;
     padding: 10px 0px;
@@ -211,7 +211,7 @@ body {
 }
 
 .cuerpoIndex .cuerpo-izquierdo {
-    
+    float: right;
     background-color: rgb(205, 243, 252);
     padding-top: 20px;
     width: 80vw;
@@ -268,7 +268,7 @@ textarea {
     transition: .4s;
 }
 
-*/
+
 
 
 .PiePagina {

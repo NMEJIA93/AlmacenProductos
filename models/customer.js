@@ -54,4 +54,12 @@ const customerSchema = Schema({
 
 });
 
+customerSchema.methods.toJSON = function () {
+    const {__v, password, _id, ...customer}= this.toObject();
+    customer.uid = _id
+    return customer;
+};
+
+
+
 module.exports = model('Customer',customerSchema )

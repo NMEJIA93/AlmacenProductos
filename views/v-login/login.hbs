@@ -40,8 +40,8 @@
                     <div class="titulo">
                         Bienvenido
                     </div>
-                    <form id="loginform">
-                        <input type="text" name="usuario" placeholder="Usuario" required>
+                    <form id="loginform" action="/login" method="POST">
+                        <input type="email" name="email" id="email" placeholder="email" required>
                         
                         <input type="password" placeholder="Contraseña" name="password" required>
                         
@@ -49,11 +49,11 @@
                     </form>
                     <div class="pie-form">
                         <a href="#">¿Perdiste tu contraseña?</a>
-                        <a href="#">¿No tienes Cuenta? Registrate</a>
+                        <a href="http://localhost:8080/{{!-- cliente/ --}}register_customer">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
                 <div class="inferior">
-                    <a href="#">Volver</a>
+                    <a href="http://localhost:8080/">Volver</a>
                 </div>
             </div>
         </div>

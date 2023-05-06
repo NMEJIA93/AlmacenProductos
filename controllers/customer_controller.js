@@ -1,10 +1,13 @@
 const { response } = require('express');
+const bcryptjs = require('bcryptjs');
+
 
 const modelCustomer = require('../models/customer');
 
 
 const customerPost = async (req, res = response) => {
     console.clear();
+    // desestructurar Campos que se van a recibir del Body
     const {
         pNombre,
         sNombre,
@@ -18,6 +21,8 @@ const customerPost = async (req, res = response) => {
         tContacto,
         password } = req.body;
 
+
+        // Creando modelo de usuario con los campos que se van a enviar a Mongo
     const customer = new modelCustomer({
         pNombre,
         sNombre,
@@ -32,20 +37,23 @@ const customerPost = async (req, res = response) => {
         password
     });
 
+    // esta validacion se paso para la carperta Helpers
+    /*  const clienteRegistrado = await modelCustomer.findOne({ nIdentificacion }) // esta linea busca en la base de datos si existe este correo
+     const emailRegistrado = await modelCustomer.findOne({ email });
+ 
+     if (emailRegistrado || clienteRegistrado) {
+         return res.status(400).json({ msg: 'Cliente Ya Registrado' });
+     } */
 
-    const clienteRegistrado = await modelCustomer.findOne({ nIdentificacion }) // esta linea busca en la base de datos si existe este correo
-    const emailRegistrado = await modelCustomer.findOne({ email });
-
-    if (emailRegistrado || clienteRegistrado) {
-        return res.status(400).json({ msg: 'Cliente Ya Registrado' });
-    }
+    // encriptar contraseña
+    const salt = bcryptjs.genSaltSync();
+    customer.password = bcryptjs.hashSync(password, salt);
 
 
     try {
-        
-
         await customer.save();
         res.render('v-login/login')
+        console.log(customer)
 
     } catch (error) {
         console.log(`El error es ------>${error}`);

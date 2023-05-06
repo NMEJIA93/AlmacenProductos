@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const cors = require('cors')
 const morgan = require('morgan');
 const path = require('path');
@@ -33,7 +34,7 @@ class Server {
         /*   this.PruebaConexionSQL()*/
 
         // Base de Datos
-        this.conectarBDmongo();
+        this.conectarBDmongo(); 
         this.conectarBDsql();
     }
 
@@ -53,6 +54,7 @@ class Server {
         /* this.app.use("/resources", express.static(__dirname + "/public")); */
         this.app.use("/resources", express.static("public"));
         this.app.use(cors());
+        this.app.use(cookieParser());
 
 
 
@@ -72,6 +74,8 @@ class Server {
         /* this.app.use(this.usuariosPath, require('../routes/usuarios')); */
         this.app.use(require('./routes/index'));
         this.app.use(/* this.clientesPath, */require('./routes/customer_routes'));
+        this.app.use(/* this.clientesPath, */require('./routes/product_routers'));
+        this.app.use(/* this.clientesPath, */require('./routes/auth_routes'));
 
 
 
