@@ -17,7 +17,6 @@ const insertProduct = async (req, res) => {
         refProducto,
         marca,
         modelo } = req.body
-
     try {
 
         const pool = await getConnection();
@@ -41,9 +40,43 @@ const insertProduct = async (req, res) => {
         res.status(500);
         res.send(error.message);
     }
+};
+
+const findByRefProducto = async (req, res) => {
+    const { refProducto } = req.body;
+    try {
+        const pool = await getConnection();
+        const result = await pool.request()
+            .input('refProducto', sql.VarChar, refProducto)
+            .query(queryBd.ProductQuery.findByRefProducto)
+
+        const resp = result.recordset[0];
+
+        if (!resp) {
+            //console.log('producto ya registrado')
+            return res.json({
+                msg: 'Producto no esta registrado'
+            });
+        }
+
+        console.log(resp)
+        //res.render('empleados/insert'); 
+        res.json({
+            resp
+        });
+
+    } catch (error) {
+        console.log(`Error en Controlador Producto--> El error es ------>${error}`);
+        res.status(500);
+        res.send(error.message);
+    }
+};
+
+const updateProduct = async(req,res)=>{
+    
 }
 
 
-module.exports = { insertProduct };
+module.exports = { insertProduct, findByRefProducto };
 
 

@@ -40,6 +40,10 @@ const login = async (req, res = response) => {
         //generar el JWT
         const token = await generarJWT(usuario.id);
 
+        // Opcion Cookie
+        res.cookie('jwt',token)
+        res.redirect('/products')
+
 
         //enviar un JSON
         /* res.json({
@@ -56,17 +60,15 @@ const login = async (req, res = response) => {
 
 
         // enviar el token y renderizar productos
-        const tokenLocalStorage = token;
+        //const tokenLocalStorage = token;
         /* res.render('v-product/insertProduct', { tokenLocalStorage }); */
 
 
         //res.render('/products', { tokenLocalStorage });
         //res.redirect('/products');
 
-        // Opcion Cookie
 
-        res.cookie('jwt',token)
-        res.redirect('/products')
+        
 
         console.log(tokenLocalStorage)
 
