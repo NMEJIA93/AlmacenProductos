@@ -70,7 +70,7 @@ const login = async (req, res = response) => {
 
         
 
-        console.log(tokenLocalStorage)
+        /* console.log(tokenLocalStorage) */
 
     } catch (error) {
         console.log(` El error es en el controlador auth ----------------> ${error}`);

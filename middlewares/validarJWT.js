@@ -14,12 +14,13 @@ const validarJWT = async (req, res = response, next) => {
     
 
     if (!token) {
-        console.log(token)
-        return res.status(401).json({
+        console.log('No puede acceder a la ruta por que no esta logueado');
+
+        return res.status(401).redirect('/login');
+        /* return res.status(401).json({
             msg: ' no hay Token en la peticion -- archivo validacion Token',
             token
-
-        })
+        }) */
 
     }
 
@@ -31,10 +32,11 @@ const validarJWT = async (req, res = response, next) => {
         //usuario no Existe
 
         if (!customer) {
-            return res.status(401).json({
+            return res.status(401).redirect('/register_customer');
+            /* return res.status(401).json({
                 msg: 'Token no valido - Usuario no Existe en BD'
-            })
-        }
+            }); */
+        };
 
 
         // verificar si el uid tiene estado true
